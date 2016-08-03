@@ -12,23 +12,22 @@
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="../jsencrypt-master/bin/jsencrypt.min.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#encrypt").click(function(){
-				var crypto = new JSEncrypt();
-				crypto.setPublicKey($("#pub_key").val());
-				var text = $("#plain").val();
-				console.log(crypto.getKey());
-				var encrypted = crypto.encrypt(text);
-				$('#crypted').val(encrypted);
-				$("#plain").val("");
+		$(document).ready(function(){                     //waits until the page has loaded
+			$("#encrypt").click(function(){               //when the <button> with ID "encrypt" is pressed, the function will exceute
+				var crypto = new JSEncrypt();             //initializes "crypto" as a JSEncrypt object so that we can use JSEncrypt's functions
+				crypto.setPublicKey($("#pub_key").val()); //sets the public key to the text inside the <textarea> with ID "pub_key"
+				var text = $("#plain").val();             //assignes the message entered in the <input> with ID "plain" to the variable "text"
+				var encrypted = crypto.encrypt(text);     //encrypts the text using JSEncrypt's "encrypt()" function and stores the ecrypted message in the variable "encrypted"
+				$('#crypted').val(encrypted);            //sets the html inside the <input> with ID "crypted" to the encrypted message. If something went wrong, this will return "false"
+				$("#plain").val("");                      //resets the <input> that takes the unencrypted message
 			});
 		});
 	</script>
 </head>
 <body>
-	<p>Unencrypted message: </p><input id="plain" />
+	<p>Unencrypted Message: </p><input id="plain" />
 	<br>
-	<p>Encrypted Message: &nbsp&nbsp&nbsp</p><input id="crypted"/>
+	<p>Encrypted Message: &nbsp&nbsp&nbsp&nbsp</p><input id="crypted" />
 	<br>
 	<button id="encrypt">Encrypt</button>
 	<h4>Key</h4>
