@@ -7,3 +7,5 @@ Demo 1 uses the [`JSEncrypt`](https://github.com/travist/jsencrypt) and [`JQuery
 2. Sets the public key of the `JSEncrypt` to the user's input [#](https://github.com/ChrisAtAcculynk/PayzurEncryption/blob/master/demos/demo1.html#L18)
 3. Encrypts the given text using `JSEncrypt`'s `encrypt()` function [#](https://github.com/ChrisAtAcculynk/PayzurEncryption/blob/master/demos/demo1.html#L20)
 4. Returns the encrypted message [#](https://github.com/ChrisAtAcculynk/PayzurEncryption/blob/master/demos/demo1.html#L21)
+
+![Gif of demo1 in action](http://i.imgur.com/aW8Ry3S.gif)
