@@ -1,0 +1,52 @@
+<head>
+	<title>Encryption And Decryption</title>
+	<style>
+		input {
+			width: 88%;
+			height: 5%;
+		}
+		p {
+			display: inline;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="../jsencrypt-master/bin/jsencrypt.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		
+			$("#encrypt").click(function(){
+				var crypto = new JSEncrypt();
+				crypto.setPublicKey($("#pub_key").val());
+				var text = $("#plain").val();
+				console.log(crypto.getKey());
+				var encrypted = crypto.encrypt(text);
+				$('#crypted').val(encrypted);
+				$("#plain").val("");
+			});
+			
+			$("#decrypt").click(function(){
+				var decryp = new JSEncrypt();
+				decryp.setPrivateKey($("#priv_key").val());
+				var text = $("#crypted").val();
+				var decrypted = decryp.decrypt(text);
+				$("#plain").val(decrypted);
+				$('#crypted').val("");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Unencrypted message: </p><input id="plain" />
+	<br>
+	<p>Encrypted Message: &nbsp&nbsp&nbsp</p><input id="crypted"/>
+	<br>
+	<button id="encrypt">Encrypt</button>
+	<button id="decrypt">Decrypt</button>
+	<h4>Keys</h4>
+	<textarea id="priv_key" cols="65" rows="15">
+	___Private Key In Pem Format Here___
+	</textarea>
+	<textarea id="pub_key" cols="65" rows="15">
+	___Public Key In Pem Format Here___
+	</textarea>
+</body>
