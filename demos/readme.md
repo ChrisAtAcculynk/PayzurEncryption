@@ -22,11 +22,11 @@ Once that is done it should work just like Demo 1, but instead of using a user d
 
 _Note that javascript does not support multiline strings so you will either need to remove the newlines from your key or add in escape characters:_
 
-`var str = "Hello\
+`var str = "Hello\ `
 
-there\
+`there\ `
 
-friend!";`
+`friend!";`
 
 or
 
