@@ -10,6 +10,8 @@ Demo 1 uses the [`JSEncrypt`](https://github.com/travist/jsencrypt) and [`JQuery
 
 ![Gif of demo1 in action](http://i.imgur.com/aW8Ry3S.gif)
 
+*_You can also hide the public key textarea using CSS properties "display:none;" and "height:1px;width:1px;"_*
+
 ##Demo 1\.2
 Demo 1\.2 also uses [`JQuery`](https://jquery.com/), as well as a slightly modified version of `JSEncrypt`. This demo requires a hardcoded public key, and therefore will not work as-is.
 
@@ -31,6 +33,7 @@ _Note that javascript does not support multiline strings so you will either need
 or
 
 `var str = "Hello\nthere\nfriend!";`
+<<<<<<< HEAD
 
 #Sending encrypted data
 You can send the encrypted data to Payzur by POSTing your data to https://cert.payzur.com/payzurservices.svc/paymentaccount/encryptedcard/create with the following format:
@@ -40,3 +43,5 @@ You can send the encrypted data to Payzur by POSTing your data to https://cert.p
 `  "encrypted_cn": "YOUR_ENCRYPTED_CARD_NUMBER",`
 `  "card_exp_date": "YOUR_CARD_EXPIRATION_DATE"`
 `}`
+=======
+>>>>>>> 968aafc2ee7c2cff63262c3094c2cb53837c6a52
