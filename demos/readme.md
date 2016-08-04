@@ -33,15 +33,17 @@ _Note that javascript does not support multiline strings so you will either need
 or
 
 `var str = "Hello\nthere\nfriend!";`
-<<<<<<< HEAD
 
 #Sending encrypted data
 You can send the encrypted data to Payzur by POSTing your data to https://cert.payzur.com/payzurservices.svc/paymentaccount/encryptedcard/create with the following format:
+
 `{`
 `  "partner_key": "YOUR_PARTNER_KEY",`
+
 `  "auth_token": "YOUR_AUTH_TOKEN",`
+
 `  "encrypted_cn": "YOUR_ENCRYPTED_CARD_NUMBER",`
+
 `  "card_exp_date": "YOUR_CARD_EXPIRATION_DATE"`
+
 `}`
-=======
->>>>>>> 968aafc2ee7c2cff63262c3094c2cb53837c6a52
