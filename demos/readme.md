@@ -42,7 +42,7 @@ You can send the encrypted data to Payzur by POSTing your data to https://cert.p
 
 `  "auth_token": "YOUR_AUTH_TOKEN",`
 
-`  "encrypted_cn": "YOUR_ENCRYPTED_CARD_NUMBER",`
+`  "encrypted_card": "YOUR_ENCRYPTED_CARD_NUMBER",`
 
 `  "card_exp_date": "YOUR_CARD_EXPIRATION_DATE"`
 
