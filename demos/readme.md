@@ -10,7 +10,7 @@ Demo 1 uses the [`JSEncrypt`](https://github.com/travist/jsencrypt) and [`JQuery
 
 ![Gif of demo1 in action](http://i.imgur.com/aW8Ry3S.gif)
 
-*_You can also hide the public key textarea using CSS properties "display:none;" and "height:1px;width:1px;"_*
+*_You can also hide the public key textarea using CSS properties "display:none;" and "height:1px;width:1px;"  Conversely, this information can also be held on the server side_*
 
 ##Demo 1\.2
 Demo 1\.2 also uses [`JQuery`](https://jquery.com/), as well as a slightly modified version of `JSEncrypt`. This demo requires a hardcoded public key, and therefore will not work as-is.
